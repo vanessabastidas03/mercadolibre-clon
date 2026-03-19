@@ -7,6 +7,7 @@ const featuredProducts = [
   { title: "Silla Ergonómica", price: 499900, tag: "PRO" },
   { title: "Cámara Web HD", price: 129900, tag: "CLASES" },
   { title: "Parlante Portátil", price: 159900, tag: "MÚSICA" },
+  { title: "Tablet 10 pulgadas", price: 899900, tag: "NUEVO" },
 ];
 
 function formatCOP(value) {
