@@ -52,4 +52,5 @@ searchForm.addEventListener("submit", (e) => {
   ? `Resultados encontrados para: "${q}"`
   : "Mostrando todos los productos";
   renderProducts(resultsGrid, q ? filtered : featuredProducts);
+  searchInput.value = "";
 });
