@@ -47,6 +47,8 @@ searchForm.addEventListener("submit", (e) => {
   const q = searchInput.value.trim().toLowerCase();
 
   const filtered = featuredProducts.filter((p) => p.title.toLowerCase().includes(q));
-  resultsHint.textContent = q ? `Resultados para: "${q}"` : "Mostrando todo (sin filtro).";
+  resultsHint.textContent = q 
+  ? `Resultados encontrados para: "${q}"`
+  : "Mostrando todos los productos";
   renderProducts(resultsGrid, q ? filtered : featuredProducts);
 });
