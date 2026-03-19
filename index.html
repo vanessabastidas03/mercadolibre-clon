@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clon MercadoLibre - Landing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="topbar">
+      <div class="container topbar__content">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand__logo">ML</span>
+          <span class="brand__name">Mercado Libre</span>
+        </a>
+
+        <form class="search" id="searchForm" autocomplete="off">
+          <input
+            id="searchInput"
+            class="search__input"
+            type="search"
+            placeholder="Buscar productos, marcas y más…"
+            aria-label="Buscar productos"
+          />
+          <button class="search__btn" type="submit">Buscar</button>
+        </form>
+
+        <nav class="nav">
+          <a class="nav__link" href="#destacados">Destacados</a>
+          <a class="nav__link" href="#servicios">Servicios</a>
+          <a class="nav__link" href="#portafolio">Portafolio</a>
+          <a class="nav__link" href="#footer">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="inicio">
+      <section class="hero">
+        <div class="container hero__content">
+          <div class="hero__text">
+            <h1>Compra rápido, seguro y a un clic.</h1>
+            <p>
+              Landing inicial estilo MercadoLibre: búsqueda, destacados, servicios y portafolio del
+              equipo.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#destacados">Ver destacados</a>
+              <a class="btn btn--ghost" href="#portafolio">Conocer desarrolladores</a>
+            </div>
+          </div>
+
+          <div class="hero__card" aria-hidden="true">
+            <div class="hero__badge">Envíos rápidos</div>
+            <div class="hero__badge">Pagos seguros</div>
+            <div class="hero__badge">Ofertas</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULTADOS BÚSQUEDA -->
+      <section class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2>Resultados</h2>
+            <p id="resultsHint" class="muted">Escribe algo arriba y presiona “Buscar”.</p>
+          </div>
+
+          <div id="resultsGrid" class="grid grid--products" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- DESTACADOS -->
+      <section id="destacados" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2>Productos destacados</h2>
+            <p class="muted">Una selección inicial para tu landing.</p>
+          </div>
+
+          <div id="featuredGrid" class="grid grid--products"></div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section id="servicios" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2>Servicios</h2>
+            <p class="muted">Bloques típicos de confianza / valor.</p>
+          </div>
+
+          <div class="grid grid--services">
+            <article class="card card--service">
+              <h3>Pagos seguros</h3>
+              <p>Experiencia de compra confiable con validaciones y buenas prácticas.</p>
+            </article>
+            <article class="card card--service">
+              <h3>Envíos y seguimiento</h3>
+              <p>Preparado para integrar tracking, estados de orden y notificaciones.</p>
+            </article>
+            <article class="card card--service">
+              <h3>Soporte</h3>
+              <p>Canales de contacto y sección de ayuda lista para crecer.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTAFOLIO (cada dev agrega su tarjeta en su rama) -->
+      <section id="portafolio" class="section section--alt">
+        <div class="container">
+          <div class="section__head">
+            <h2>Portafolio de desarrolladores</h2>
+            <p class="muted">
+              Cada integrante crea su tarjeta en una rama feature y la integra por PR a develop.
+            </p>
+          </div>
+
+          <div class="grid grid--devs" id="devGrid">
+            <!-- DEV 1 -->
+            <article class="card dev" id="dev1">
+              <img
+                class="dev__avatar"
+                src="https://i.pravatar.cc/160?img=1"
+                alt="Avatar de Dev 1"
+              />
+              <div class="dev__body">
+                <h3 class="dev__name">Dev 1 (tú)</h3>
+                <p class="dev__desc">
+                  Desarrollador/a web en formación. Me enfoco en UI limpia, componentes y buenas
+                  prácticas.
+                </p>
+                <ul class="chips" aria-label="Servicios ofrecidos">
+                  <li class="chip">Landing pages</li>
+                  <li class="chip">UI/UX básico</li>
+                  <li class="chip">Integración HTML/CSS/JS</li>
+                </ul>
+                <p class="dev__tech"><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
+                <a class="dev__link" href="https://github.com/tu-usuario" target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+              </div>
+            </article>
+
+            <!-- DEV 2, DEV 3, DEV 4 se agregan por ramas feature -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="footer">
+      <div class="container footer__content">
+        <p><strong>Clon Inicial MercadoLibre</strong> — Taller Git & GitHub (GitFlow)</p>
+        <p class="muted">Hecho para aprendizaje colaborativo.</p>
+      </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
